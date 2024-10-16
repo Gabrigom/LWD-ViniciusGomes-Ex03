@@ -27,7 +27,7 @@ class MitologiaDetails(Resource):
     def get(self, id):
         mito = MitologiaService.get_single_mito(id)
         if mito is None:
-            return make_response(jsonify("Mitologia não encontrada"), 404)
+            return make_response(jsonify("Mitologia não encontrada"), 400)
         mitoschema = mito_schema.MitologiaSchema()
         return make_response(mitoschema.jsonify(mito), 200)
     

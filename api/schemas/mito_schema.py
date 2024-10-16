@@ -1,7 +1,7 @@
 from api import mm
 from marshmallow import Schema, fields
 
-class MitologiaSchema(mm.Sceham):
+class MitologiaSchema(mm.Schema):
     class Meta:
         fields = ('_id', 'name', 'deities')
         

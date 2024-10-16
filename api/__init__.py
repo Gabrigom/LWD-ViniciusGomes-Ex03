@@ -10,3 +10,4 @@ api = Api(app)
 mongo = PyMongo(app)
 mm = Marshmallow(app)
 
+from .resources import mito_resource
